@@ -53,7 +53,7 @@ To simulate more real-world alike conditions, we subject image to multiple diffe
 
 I tried adding random noise (Gaussian, salt & pepper etc.) however this resulted in very long training times to get it to the level of expected accuracy.
 
-Images were passed into training process using a generator in order to avoid running out of memory.
+Images were passed into training process using a generator in order to avoid running out of memory. Due to not having an analog controller, I relied on provided training data that can be found in the **"data"** directory.
 
 # Step-by-step
 
