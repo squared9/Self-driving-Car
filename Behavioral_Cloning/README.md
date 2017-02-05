@@ -12,11 +12,21 @@ The architecture is a [convolutional neural network](https://en.wikipedia.org/wi
 
 The following diagram describes the architecture:
 
-![NVidia-Dave2](images/NVidia_Dave-2.svg)
+![NVidia-Dave2](https://rawgithub.com/squared9/Self-driving-Car/master/Behavioral_Cloning/images/NVidia_Dave-2.svg)
 
 The training itself takes random batch of images from all three cameras and their corresponding steering values:
 
-![left](images/left.jpg) ![center](images/center.jpg) ![right](images/right.jpg)
+![left](images/left.jpg)
+
+*Left camera*
+
+![center](images/center.jpg)
+
+*Center camera*
+
+![right](images/right.jpg)
+
+*Right camera*
 
 Both left and right camera images adjust the steering angle value a bit - the assumption is that when the front camera sees an image similar to our training left/right image, its steering angle must be corrected as it would otherwise run into the risk of escaping the road. This however causes a tricky situation where car might be driving from left to right and back on straights due to this enforced steering intervention. From the experience, this tends to get better with more training epochs.  
 
@@ -27,7 +37,7 @@ The epochs tested varied between 1-40 (taking from 10 minutes to 8 hours on GTX9
 
 On the following picture the whole image processing pipeline is described:
 
-![image processing pipeline](images/Image_processing_pipeline.svg)
+![image processing pipeline](https://rawgithub.com/squared9/Self-driving-Car/master/Behavioral_Cloning/images/Image_processing_pipeline.svg)
 
 Processing training images is important as we can simulate different driving and lighting conditions, for example shadows on the road, sunny/dark side of mountains, morning or noon drive, bumpy roads, high-speed driving with suspension overload etc. For this a set of very basic transforms was applied.
 
@@ -79,9 +89,9 @@ Sixth, we crop the image to expected dimension so that it covers mainly the road
 
 # Results
 
-These two HEVC movies show the performance of autonomous driving on two tracks. One is the training track, the other is a testing track.
+These two HEVC movies show the performance of autonomous driving on two tracks. One is the training track, the other is a testing track. For viewing please make sure you are using a browser capable of displaying HEVC/H265 movies.
 
-[![Track 1](images/Track1.png)](video/track1.mp4) [![Track 2](images/Track2.png)](video/track2.mp4)
+[![Track 1](images/Track1.png)](https://raw.githubusercontent.com/squared9/Self-driving-Car/master/Behavioral_Cloning/video/Track1.mp4) [![Track 2](images/Track2.png)](https://raw.githubusercontent.com/squared9/Self-driving-Car/master/Behavioral_Cloning/video/Track2.mp4)
 
 What you might notice here is that car is sometimes swerving left-right on straights; this is caused by applying both stronger steering correction depending on angle as well as inability to control the speed, so steering itself is not dependent on the speed as we would expect in the real world. Obviously, an extension of this model would be to pass both steering angle and speed/throttle etc. and get the same training output.
 
