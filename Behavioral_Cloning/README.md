@@ -14,6 +14,9 @@ The following diagram describes the architecture:
 
 ![NVidia-Dave2](https://rawgithub.com/squared9/Self-driving-Car/master/Behavioral_Cloning/images/NVidia_Dave-2.svg)
 
+In addition, there is a batch normalization added as a first layer in Keras in order to [reduce internal covariate shift](https://arxiv.org/pdf/1502.03167v3.pdf) and improve learning speed significantly (up to 14x)
+
+
 # Training
 
 The training itself takes random batch of images from all three cameras and their corresponding steering values:
@@ -104,7 +107,7 @@ These two movies show the performance of autonomous driving on two tracks. One i
 
 [![Track 1](images/Track1.png)](https://raw.githubusercontent.com/squared9/Self-driving-Car/master/Behavioral_Cloning/video/Track1.mp4) [![Track 2](images/Track2.png)](https://raw.githubusercontent.com/squared9/Self-driving-Car/master/Behavioral_Cloning/video/Track2.mp4)
 
-What you might notice here is that car is sometimes swerving left-right on straights (i.e. driving like Verstappen's grandmother); this is caused by applying both stronger steering correction depending on angle as well as inability to control the speed, so steering itself is not dependent on the speed as we would expect in the real world. Obviously, an extension of this model would be to pass both steering angle and speed/throttle etc. and get the same training output.
+What you might notice here is that car is sometimes swerving left-right on straights; this is caused by applying both stronger steering correction depending on angle as well as inability to control the speed, so steering itself is not dependent on the speed as we would expect in the real world. Obviously, an extension of this model would be to pass both steering angle and speed/throttle etc. and get the same training output.
 
 In the second video the car stops short of reaching the end of the road on a steep climb - here more throttle would be beneficial as well.
 

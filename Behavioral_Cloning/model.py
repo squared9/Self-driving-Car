@@ -6,11 +6,11 @@ import pandas
 from keras.models import Sequential
 from keras.optimizers import Adam
 from keras.layers.convolutional import Convolution2D
-from keras.layers import Flatten, Activation, Dense, MaxPooling2D, Dropout
+from keras.layers import Flatten, Activation, Dense, MaxPooling2D, Dropout, BatchNormalization
 
 # model and training constants
 LEARNING_RATE = 0.0005
-EPOCHS = 20
+EPOCHS = 15
 NUMBER_OF_IMAGES = 24064  ## make them divisible by 128 instead of total of 24108
 TRAIN_BATCH_SIZE = 19200
 VALIDATION_BATCH_SIZE = 4864
@@ -32,6 +32,9 @@ def create_model():
     """
     # NVidia DAVE-2
     dave2 = Sequential()
+
+    # batch regularization to reduce internal covariate shift
+    dave2.add(BatchNormalization(input_shape=(66, 200, 3)))
 
     # 200x66x3 -> 98x31x24, 5x5 convolution
     dave2.add(Convolution2D(24, 5, 5, border_mode="valid", input_shape=(66, 200, 3), dim_ordering="tf"))
