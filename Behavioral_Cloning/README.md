@@ -34,7 +34,7 @@ The training itself takes random batch of images from all three cameras and thei
 Both left and right camera images adjust the steering angle value a bit - the assumption is that when the front camera sees an image similar to our training left/right image, its steering angle must be corrected as it would otherwise run into the risk of escaping the road. This however causes a tricky situation where car might be driving from left to right and back on straights due to this enforced steering intervention. From the experience, this tends to get better with more training epochs.  
 
 
-The epochs tested varied between 1-40 (taking from 10 minutes to 8 hours on GTX970), with learning rate of 0.0005, batch size of 128. Number of images was 24064, training size consisted of 19200 images and validation set of 4864 images. These were randomly chosen for each run. Adam optimizer was used so learning rate was not tuned manually.
+The epochs tested varied between 1-40 (taking from 10 minutes to 8 hours on GTX970), with learning rate of 0.0005, batch size of 128. Number of images was 24064, training size consisted of 19200 images and validation set of 4864 images. These were randomly chosen for each run. Adam optimizer was used so learning rate was not further tuned manually.
 
 # Image processing
 
