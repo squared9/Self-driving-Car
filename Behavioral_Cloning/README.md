@@ -1,4 +1,4 @@
-# Self-driving Car - Behavioral Transfer
+# Self-driving Car - Behavioral Cloning
 
 This project aims to clone a driving style of a person into a self-driving car on a simulation track using deep learning.
 
@@ -14,19 +14,22 @@ The following diagram describes the architecture:
 
 ![NVidia-Dave2](https://rawgithub.com/squared9/Self-driving-Car/master/Behavioral_Cloning/images/NVidia_Dave-2.svg)
 
+# Training
+
 The training itself takes random batch of images from all three cameras and their corresponding steering values:
+
+*Left camera:*
 
 ![left](images/left.jpg)
 
-*Left camera*
+*Center camera:*
 
 ![center](images/center.jpg)
 
-*Center camera*
+*Right camera:*
 
 ![right](images/right.jpg)
 
-*Right camera*
 
 Both left and right camera images adjust the steering angle value a bit - the assumption is that when the front camera sees an image similar to our training left/right image, its steering angle must be corrected as it would otherwise run into the risk of escaping the road. This however causes a tricky situation where car might be driving from left to right and back on straights due to this enforced steering intervention. From the experience, this tends to get better with more training epochs.  
 
@@ -43,13 +46,21 @@ Processing training images is important as we can simulate different driving and
 
 First, we start with an original driving image. This can be taken by one of the three cameras (left, center, right).
 To simulate more real-world alike conditions, we subject image to multiple different transforms:
+
 1) **casting shadows** - this is a simple placement of a few transparent rectangles on random parts of the screen to simulate shadow effect
+
 2) **rotation** - slight rotation can simulate driving on a bumpy road or at high speeds
+
 3) **translation** - moving image a bit to either direction can simulate bumpy road or momentum
+
 4) **gamma correction** - adjusting gamma can simulate different lighting conditions
+
 5) **resize** - we don't usually need so much information as all pixels in the image, smaller one is sufficient
+
 6) **crop** - cropping image to required input size (in our case 200x66x3)
+
 7) **color model** - we can try different color models like RGB, HSV, HLS, Lab, greyscale etc. RGB seems to be suffficient for our model though
+
 
 I tried adding random noise (Gaussian, salt & pepper etc.) however this resulted in very long training times to get it to the level of expected accuracy.
 
@@ -89,7 +100,7 @@ Sixth, we crop the image to expected dimension so that it covers mainly the road
 
 # Results
 
-These two HEVC movies show the performance of autonomous driving on two tracks. One is the training track, the other is a testing track. For viewing please make sure you are using a browser capable of displaying HEVC/H265 movies.
+These two movies show the performance of autonomous driving on two tracks. One is the training track, the other is a testing track. For viewing please make sure you are using a browser capable of displaying HEVC/H.265 movies.
 
 [![Track 1](images/Track1.png)](https://raw.githubusercontent.com/squared9/Self-driving-Car/master/Behavioral_Cloning/video/Track1.mp4) [![Track 2](images/Track2.png)](https://raw.githubusercontent.com/squared9/Self-driving-Car/master/Behavioral_Cloning/video/Track2.mp4)
 
@@ -110,6 +121,7 @@ You need to have the following main libraries installed:
 - [scikit-image](http://scikit-image.org/)
 - [NumPy](http://www.numpy.org/)
 - [SciPy](http://www.scipy.org/)
+- [OpenCV](http://www.opencv.org)
 
 To train a model, place driving log into **"data"** directory and corresponding images to **"data/IMG"** directory. Then simply run
 
