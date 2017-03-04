@@ -224,7 +224,8 @@ There are a few challenges to solve:
  single lighting condition. Perhaps utilizing deep learning to adjust input image to acceptable range
  would help here
 - the curvature computation is not perfect; due to projection and the fact that a small variation of distant trapezoid
- positions can cause significant differences frame-by-frame, a more robust method would be preferrable
+ positions can cause significant differences frame-by-frame, a more robust method would be preferable
+- curvature computation is affected also by small elevation/pitch changes of the camera view
 - detecting lanes using histogram, sliding window or convolution is not flexible when dealing with more complex road 
 features and can be often fooled by road surface characteristics, not just paint. More effective way that could handle
 intersections, lane merges etc. is needed
