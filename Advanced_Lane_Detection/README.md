@@ -2,6 +2,11 @@
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
 The aim of this project is to detect lanes of arbitrary curvature fairly accurately under any driving conditions.
+
+This article describes how to transform input video to an annotated video with detected lanes:
+
+![animated original](images/animation-original.gif)
+![animated lanes](images/animation-lanes.gif)
  
 
 # Camera calibration
@@ -207,7 +212,7 @@ After projecting, we get the lane nicely fitting our camera view:
 
 Here is a resulting video where the whole pipeline described here was applied:
  
-[![Track 1](images/17-result.png)](https://raw.githubusercontent.com/squared9/Self-driving-Car/master/Advanced_Lane_Detection/video/lane-output.mp4)
+[![Track 1](images/17-result.png)](https://raw.githubusercontent.com/squared9/Self-driving-Car/master/Advanced_Lane_Detection/video/lane_output.mp4)
 
 The whole pipeline is implemented in the [main](main.py) source file.
 
