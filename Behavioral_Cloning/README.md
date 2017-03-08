@@ -1,6 +1,11 @@
 # Self-driving Car - Behavioral Cloning
+[![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
-This project aims to clone a driving style of a person into a self-driving car on a simulation track using deep learning.
+This project aims to clone a driving style of a person into a self-driving car on a simulation track using deep learning, 
+as can be seen on the following two animations:
+
+![Track 1](images/track1_animation.gif)
+![Track 2](images/track2_animation.gif)
 
 # Deep learning setup
 
