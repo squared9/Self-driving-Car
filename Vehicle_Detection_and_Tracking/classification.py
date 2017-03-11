@@ -206,8 +206,7 @@ def extract_features(image_file_names, color_space='RGB', spatial_size=(32, 32),
 
         # hog_features = get_hog_features(gray_image, hog_orientations, hog_pixels_per_cell, hog_cells_per_block,
         #                                 visualize=False, feature_vector=True)
-        hog_features = get_all_hog_features(feature_image, hog_orientations, hog_pixels_per_cell, hog_cells_per_block,
-                                            visualize=False, feature_vector=True)
+        hog_features = get_all_hog_features(feature_image, hog_orientations, hog_pixels_per_cell, hog_cells_per_block)
 
         # Append the new feature vector to the features list
         features.append(np.concatenate((spatial_features, histogram_features, hog_features)))
