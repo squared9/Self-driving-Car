@@ -79,7 +79,7 @@ Using HOG is implemented in [classification](classification.py) source file, met
 
 # Classifier
 
-For classification, linear [SVM](https://en.wikipedia.org/wiki/Support_vector_machine)-based classifier \
+For classification, linear [SVM](https://en.wikipedia.org/wiki/Support_vector_machine)-based classifier 
 ([SVC](http://scikit-learn.org/stable/modules/svm.html)) is used. In order to properly use the classifier, 
 the following steps must be performed:
 - randomization of the order of training images
