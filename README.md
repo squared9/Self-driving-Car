@@ -5,4 +5,4 @@ Currently there are these projects:
 
 - **Behavioral Cloning** project
 - **Advanced Lane Detection** project
-
+- **Vehicle Detection and Tracking** project
