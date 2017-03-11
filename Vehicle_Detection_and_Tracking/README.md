@@ -3,13 +3,15 @@
 
 In this project the goal is to detect vehicles in the scene and track them continously and accurately during driving.
 
+![vehicle tracking](images/vehicle_tracking.gif)
+
 # Image classification
 The main problem for detecting vehicles in images lies in image classification. We need to define features
 for classification and decide which classifier is going to be used.
 
 For vehicle classification the following three features are utilized:
-- [spatial binning](https://en.wikipedia.org/wiki/Data_binning)
-- [color histogram](https://en.wikipedia.org/wiki/Color_histogram)
+- [Spatial binning](https://en.wikipedia.org/wiki/Data_binning)
+- [Color histogram](https://en.wikipedia.org/wiki/Color_histogram)
 - [Histogram of Oriented Gradients (HOG)](https://en.wikipedia.org/wiki/Histogram_of_oriented_gradients)
 
 ## Training dataset
