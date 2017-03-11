@@ -181,7 +181,7 @@ Heat map processing can be found in [tracking](tracking.py) source file, method 
 
 The following video demonstrates the result of vehicle detection and tracking:
 
-[![video](images/09-result.png)](vehicle_tracking_result.mp4)
+[![video](images/09-result.png)](https://raw.githubusercontent.com/squared9/Self-driving-Car/master/Vehicle_Detection_and_Tracking/vehicle_tracking_result.mp4)
 
 
 # Challenges
