@@ -1,6 +1,8 @@
 # Self-driving-Car
 This repository should contain all projects for Self-driving Car ND
 
+[![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
+
 Currently there are these projects:
 
 - [**Behavioral Cloning**](Behavioral_Cloning) project
@@ -10,3 +12,4 @@ Currently there are these projects:
 - [**Unscented Kalman Filter**](Unscented_Kalman_Filter) project
 - [**Kidnapped Vehicle - Particle Filter**](Kidnapped_Vehicle_Particle_Filter) project
 - [**PID Control for Self-driving Car**](PID_Control) project
+- [**Model Predictive Control**](Model_Predictive_Control) project
