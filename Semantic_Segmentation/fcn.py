@@ -6,7 +6,6 @@ def custom_init(shape, dtype=tf.float32, partition_info=None, seed=0):
     return tf.random_normal(shape, dtype=dtype, seed=seed)
 
 
-# TODO: Use `tf.layers.conv2d` to reproduce the result of `tf.layers.dense`.
 # Set the `kernel_size` and `stride`.
 def conv_1x1(x, num_outputs, kernel_size=1, stride=(1, 1)):
     return tf.layers.conv2d(x, num_outputs, kernel_size, stride, weights_initializer=custom_init)
