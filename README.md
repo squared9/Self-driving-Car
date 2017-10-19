@@ -13,4 +13,5 @@ Currently there are these projects:
 - [**Kidnapped Vehicle - Particle Filter**](Kidnapped_Vehicle_Particle_Filter) project
 - [**PID Control for Self-driving Car**](PID_Control) project
 - [**Model Predictive Control**](Model_Predictive_Control) project
+- [**Path Planning**](Path_Planning) project
 - [**Semantic Segmentation**](Semantic_Segmentation) project
