@@ -97,6 +97,29 @@ planner can make a smooth transition without any jerks to desired lane.
 
 Simulator for this project can be download from [here](https://github.com/udacity/self-driving-car-sim/releases/tag/T3_v1.2).
 
+## Further reading
+[Practical Search Techniques in Path Planning for Autonomous Driving](http://ai.stanford.edu/~ddolgov/papers/dolgov_gpp_stair08.pdf) by Dolgov, Thrun, Montemerlo, Diebel
+
+[A Path Planning and Obstacle Avoidance Algorithm for an Autonomous Robotic Vehicle](https://webpages.uncc.edu/~jmconrad/GradStudents/Thesis_Ghangrekar.pdf) by Ghangrekar
+
+[Introduction to Robotics #4: Path-Planning](http://correll.cs.colorado.edu/?p=965) by Correll
+
+[Path planning](http://www.coppeliarobotics.com/helpFiles/en/pathPlanningModule.htm) by Coppelia Robotics
+
+[The Path Planning Problem](https://www.cs.cmu.edu/afs/cs/project/jair/pub/volume9/mazer98a-html/node2.html) at CMU
+
+[Path planning](http://www.roborealm.com/help/Path_Planning.php) at RoboRealm
+
+[Path planning vs Motion planning](https://robotics.stackexchange.com/questions/8302/what-is-the-difference-between-path-planning-and-motion-planning) at StackOverflow
+
+[Tutorial on A* Robot Path Planning](http://robotshop.com/letsmakerobots/excellent-tutorial-a-robot-path-planning)
+
+[Path Planning in Environments of Different Complexity](https://de.mathworks.com/help/robotics/examples/path-planning-in-environments-of-different-complexity.html?requestedDomain=www.mathworks.com) by MatLab
+
+[Robot Motion Planning](http://ais.informatik.uni-freiburg.de/teaching/ss11/robotics/slides/18-robot-motion-planning.pdf) by Burgard, Stachniss, Bennewitz, Arras 
+
+[Path Planning and Collision Avoidance](http://ais.informatik.uni-freiburg.de/teaching/ss10/robotics/slides/16-pathplanning.pdf) by Burgard, Stachniss, Bennewitz, Arras
+
 ## Video
 
 [![Video](images/path_planning.png)](https://youtu.be/-IThG5m9Fwo)
